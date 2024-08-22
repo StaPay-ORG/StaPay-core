@@ -1,46 +1,6 @@
-> sui client call --package 0xc6374c7da60746002bfee93014aeb607e023b2d6b25c9e55a152b826dbc8c1ce --module incentive_v2
-> --function entry_withdraw --args 0x0000000000000000000000000000000000000000000000000000000000000006
-> 0x1568865ed9a0b5ec414220e8f79b3d04c77acc82358f6e5ae4635687392ffbef
-> 0xbb4e2f4b6205c2e2a2db47aeb4f830796ec7c005f88537ee775986639bc442fe
-> 0x71b9f6e822c48ce827bceadce82201d6a7559f7b0350ed1daa1dc2ba3ac41b56 3 777
-> 0xaaf735bf83ff564e1b219a0d644de894ef5bdc4b2250b126b2a46dd002331821
-> 0xf87a8acb8b81d14307894d12595541a73f19933f88e1326d5be349c7a6f7559c
-> --type-args 0xaf8cd5edc19c4512f4259f0bee101a40d41ebed738ade5874359610ef8eeced5::coin::COIN
-> --gas-budget 5000000
+铸造用户NFT
+> sui client call --package 0x05f6a9dfb05a45efe5a8718d1473e0bed920105db5662adb5e10b6d90363de09 --module stapay_nft --function mint --args 0xb8673b7b7503129af447bc917a9691532c58d8d13f79f63ed9a0461f89392b1f stapay_stake 10 bucket stake https://arweave.net/lxfLYLH1Me6tSUHNhDRKCbdqK8pKPBUNnWd9tVFFFAw 0x007dcc09755ab7423e7b0801694c0b05dd0d974043a7f890030fdd37b32681ab --gas-budget 50000000
 
-``
-sui client call \
---package 0xc6374c7da60746002bfee93014aeb607e023b2d6b25c9e55a152b826dbc8c1ce \
---module incentive_v2 \
---function entry_withdraw \
---args 0x06 \
-0x1568865ed9a0b5ec414220e8f79b3d04c77acc82358f6e5ae4635687392ffbef \
-0xbb4e2f4b6205c2e2a2db47aeb4f830796ec7c005f88537ee775986639bc442fe \
-0x96df0fce3c471489f4debaaa762cf960b3d97820bd1f3f025ff8190730e958c5 \
-0 \
-1 \
-0xaaf735bf83ff564e1b219a0d644de894ef5bdc4b2250b126b2a46dd002331821 \
-0xf87a8acb8b81d14307894d12595541a73f19933f88e1326d5be349c7a6f7559c \
---type-args "0x2::sui::SUI" \
---gas-budget 100000000
-``
+销毁用户NFT
+> sui client call --package 0x05f6a9dfb05a45efe5a8718d1473e0bed920105db5662adb5e10b6d90363de09 --module stapay_nft --function burn --args 0xb8673b7b7503129af447bc917a9691532c58d8d13f79f63ed9a0461f89392b1f 0xa412d7fb06e3e16bc29c8a1986a45259b379c12956bccc29407b70d8878db444 --gas-budget 50000000
 
-``
-sui client call \
---package 0xc6374c7da60746002bfee93014aeb607e023b2d6b25c9e55a152b826dbc8c1ce \
---module incentive_v2 \
---function entry_deposit \
---args 0x06 \
-0xbb4e2f4b6205c2e2a2db47aeb4f830796ec7c005f88537ee775986639bc442fe \
-0x96df0fce3c471489f4debaaa762cf960b3d97820bd1f3f025ff8190730e958c5 \
-0 \
-0x5b1f4e9cc42842f506e85951ba3fe7338e756dc13fb58ca5464d622676955a1d \
-8000000 \
-0xaaf735bf83ff564e1b219a0d644de894ef5bdc4b2250b126b2a46dd002331821 \
-0xf87a8acb8b81d14307894d12595541a73f19933f88e1326d5be349c7a6f7559c \
---type-args "0x2::sui::SUI" \
---gas-budget 10000000
-``
-
-铸造NFT
-> sui client call --package 0x63cbff93dda021a3b1bbd48b8ae5efbc2a36e451fa84f2629410838479f046ae --module stapay_nft --function mint --args 0xcd833e5aa9b35b3e8f713092b587ead54b5da9b2a1393c615d02a83e2ea84ec8 stapay_stake 10 stake navi https://arweave.net/O6VkVIasG5GhB8HMb3s8Z9_atSnkOeid7egwNXsLRz8 0x007dcc09755ab7423e7b0801694c0b05dd0d974043a7f890030fdd37b32681ab --gas-budget 50000000# StaPay-core
