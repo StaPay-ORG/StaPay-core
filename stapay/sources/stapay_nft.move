@@ -88,6 +88,22 @@ module stapay::stapay_nft {
         transfer::share_object(service_mint_record);
     }
 
+    public entry fun mint_for_service_user(
+        service_mint_record: &mut ServiceMintRecord,
+        name: String,
+        amount: u64,
+        service: String,
+        third_party_service: String,
+        user_image_url: String,
+        service_image_url: String,
+        user_recipient: address,
+        service_recipient: address,
+        ctx: &mut TxContext
+    ) {
+        mint(service_mint_record, name, amount, service, third_party_service, user_image_url, user_recipient, ctx);
+        mint(service_mint_record, name, amount, service, third_party_service, service_image_url, service_recipient, ctx);
+    }
+
     public entry fun mint(
         service_mint_record: &mut ServiceMintRecord,
         name: String,

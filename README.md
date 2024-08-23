@@ -1,6 +1,9 @@
+铸造用户和服务商NFT
+> sui client call --package 0x9e44ae1a39eda019f7f1b2e7e378ec99f35a83baca5d9f6eca29f6c2d06e4a6e --module stapay_nft --function mint_for_service_user --args 0xc7d34f95bc5fbce6c37eaae534a3dc4131066f511635c26a5dc29808f39ba4e6 user\ nft 10 YOUTUBE_SERVICE_ID Youtube\ service https://arweave.net/lxfLYLH1Me6tSUHNhDRKCbdqK8pKPBUNnWd9tVFFFAw https://arweave.net/O6VkVIasG5GhB8HMb3s8Z9_atSnkOeid7egwNXsLRz8 0xd615979500b79b9b79c9d64215189ea90c05fd5040a3cf83a8a87563d23ae26d 0x007dcc09755ab7423e7b0801694c0b05dd0d974043a7f890030fdd37b32681ab --gas-budget 50000000
+
 铸造用户NFT
-> sui client call --package 0xc21d5cf36d0344b61e39df46a24dd791529d7b1625e2c0fc2fbe6c57a5081365 --module stapay_nft --function mint --args 0xc621df8b5bb288ca235e380319a95f14d9a91a590419b92f32a1c2cc656baee0 stapay_stake 10 navi stake https://arweave.net/lxfLYLH1Me6tSUHNhDRKCbdqK8pKPBUNnWd9tVFFFAw 0xd615979500b79b9b79c9d64215189ea90c05fd5040a3cf83a8a87563d23ae26d --gas-budget 50000000
+> sui client call --package 0x9e44ae1a39eda019f7f1b2e7e378ec99f35a83baca5d9f6eca29f6c2d06e4a6e --module stapay_nft --function mint --args 0xc7d34f95bc5fbce6c37eaae534a3dc4131066f511635c26a5dc29808f39ba4e6 user\ nft 10 YOUTUBE_SERVICE_ID Youtube\service https://arweave.net/lxfLYLH1Me6tSUHNhDRKCbdqK8pKPBUNnWd9tVFFFAw 0x9889d68011a0361ba9643d29989e8078188760584fe39b735f6dce2cffbf0168 --gas-budget 50000000
 
 销毁用户NFT
-> sui client call --package 0xc21d5cf36d0344b61e39df46a24dd791529d7b1625e2c0fc2fbe6c57a5081365 --module stapay_nft --function burn --args 0xc621df8b5bb288ca235e380319a95f14d9a91a590419b92f32a1c2cc656baee0 0x59b1014d99b9b9b1c81110c7c8c5007767b638c80df606ab8b041fed3b9baa08 --gas-budget 50000000
+> sui client call --package 0x9e44ae1a39eda019f7f1b2e7e378ec99f35a83baca5d9f6eca29f6c2d06e4a6e --module stapay_nft --function burn --args 0xc7d34f95bc5fbce6c37eaae534a3dc4131066f511635c26a5dc29808f39ba4e6 0x461feb16f436b4d58fb7b541b594ad841396b7ac0ba2e5785791ebf51713e4af --gas-budget 50000000
 
