@@ -101,10 +101,10 @@ module stapay::stapay_nft {
         // 判断，该地址针对该service是否铸造过nft
         if (table::contains(&service_mint_record.record, recipient)) {
             //该地址如果铸造过NFT，检查有没有铸造过该service的
-            assert!(
-                !vec_set::contains(table::borrow(&service_mint_record.record, recipient), &service),
-                EDontMintAgain
-            );
+            // assert!(
+            //     !vec_set::contains(table::borrow(&service_mint_record.record, recipient), &service),
+            //     EDontMintAgain
+            // );
             // 该地址如果没有铸造过NFT，则添加记录
             let service_record = table::borrow_mut(&mut service_mint_record.record, recipient);
             vec_set::insert(service_record, service);
@@ -122,7 +122,7 @@ module stapay::stapay_nft {
 
         let nft_id: u64 = table::length(&service_mint_record.record) + 1;
         // table::add(&mut mint_record.record, recipient, nft_id);
-        assert!(nft_id <= MAX_SUPPLY, ENotEnoughSupply);
+        // assert!(nft_id <= MAX_SUPPLY, ENotEnoughSupply);
 
         let nft = STAPAYNFT {
             id: object::new(ctx),

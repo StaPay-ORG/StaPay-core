@@ -1,6 +1,6 @@
 铸造用户NFT
-> sui client call --package 0x05f6a9dfb05a45efe5a8718d1473e0bed920105db5662adb5e10b6d90363de09 --module stapay_nft --function mint --args 0xb8673b7b7503129af447bc917a9691532c58d8d13f79f63ed9a0461f89392b1f stapay_stake 10 bucket stake https://arweave.net/lxfLYLH1Me6tSUHNhDRKCbdqK8pKPBUNnWd9tVFFFAw 0x007dcc09755ab7423e7b0801694c0b05dd0d974043a7f890030fdd37b32681ab --gas-budget 50000000
+> sui client call --package 0xc21d5cf36d0344b61e39df46a24dd791529d7b1625e2c0fc2fbe6c57a5081365 --module stapay_nft --function mint --args 0xc621df8b5bb288ca235e380319a95f14d9a91a590419b92f32a1c2cc656baee0 stapay_stake 10 navi stake https://arweave.net/lxfLYLH1Me6tSUHNhDRKCbdqK8pKPBUNnWd9tVFFFAw 0xd615979500b79b9b79c9d64215189ea90c05fd5040a3cf83a8a87563d23ae26d --gas-budget 50000000
 
 销毁用户NFT
-> sui client call --package 0x05f6a9dfb05a45efe5a8718d1473e0bed920105db5662adb5e10b6d90363de09 --module stapay_nft --function burn --args 0xb8673b7b7503129af447bc917a9691532c58d8d13f79f63ed9a0461f89392b1f 0xa412d7fb06e3e16bc29c8a1986a45259b379c12956bccc29407b70d8878db444 --gas-budget 50000000
+> sui client call --package 0xc21d5cf36d0344b61e39df46a24dd791529d7b1625e2c0fc2fbe6c57a5081365 --module stapay_nft --function burn --args 0xc621df8b5bb288ca235e380319a95f14d9a91a590419b92f32a1c2cc656baee0 0x59b1014d99b9b9b1c81110c7c8c5007767b638c80df606ab8b041fed3b9baa08 --gas-budget 50000000
 
